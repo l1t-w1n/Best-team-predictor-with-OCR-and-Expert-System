@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Stellar by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1>Game</h1>
+					</header>
+				<!-- Main -->
+					<div id="main">
+						<!-- Content -->
+							<section id="content" class="main">
+								<script>
+									var cardImages = {{ card_images|tojson }};
+								</script>
+								<h2>Opponent</h2>
+								<div id = "selected-cards">
+									<div class="card-placeholder" id="card-placeholder-1"></div>
+									<div class="card-placeholder" id="card-placeholder-2"></div>
+									<div class="card-placeholder" id="card-placeholder-3"></div>
+									<div class="card-placeholder" id="card-placeholder-4"></div>
+									<div class="card-placeholder" id="card-placeholder-5"></div>
+								</div>
+								<h2>Player</h2>
+								<div id="player-cards"></div>
+								<div  class="actions">
+									<a href="/" class="button">Home</a>
+									<button onclick="analyzeSelectedHeroes()">Analyze Colors</button>
+        							<button onclick="clearSelections()">Clear Selections</button>
+								</div>
+							</section>
+					</div>
+				<!-- Footer -->
+				<footer id="footer">
+					<h2>Aliquam sed mauris</h2>
+					<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>					
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+		<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/cards.js') }}"></script>
+	</body>
+</html>

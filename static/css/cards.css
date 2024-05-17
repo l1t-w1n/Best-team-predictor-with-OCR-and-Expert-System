@@ -1,0 +1,22 @@
+#opponent-cards img,  #player-cards img{
+    height: 262.5px;
+    width: 187.5px;
+    margin: 5px;
+}
+#selected-cards{
+    display: flex; 
+}
+#card-placeholder-1, #card-placeholder-2, #card-placeholder-3, #card-placeholder-4, #card-placeholder-5{
+    height: 262.5px;
+    width: 187.5px;
+    margin: 5px;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.card-placeholder img{
+    height: 262.5px;
+    width: 187.5px;
+    margin: 5px;
+    background-color: white;
+}
